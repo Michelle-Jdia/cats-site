@@ -1,0 +1,18 @@
+.cards__age-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0 46px 0 22px;
+  padding: 0;
+}
+.cards__pow-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0;
+}
+@media all and (max-width: 1114px) {
+  .cards__age-container {
+    margin: 0 0 0 0;
+  }
+}

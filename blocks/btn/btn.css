@@ -1,0 +1,30 @@
+.btn__up {
+  outline: none;
+  border: none;
+  text-align: center;
+  position: fixed;
+  right: 1%;
+  bottom: 49px;
+  width: 59px;
+  height: 59px;
+  background-color: #6ebbd3;
+  background-image: url('../../image/svg/arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.4s;
+}
+.btn__up:hover {
+    opacity: .8;
+}
+@media all and (max-width: 450px) {
+    .btn__up {
+        width: 40px;
+        height: 40px;
+    }
+}

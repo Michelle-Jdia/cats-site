@@ -1,0 +1,24 @@
+.card__tex-container {
+  margin: 0 auto 0 29px;
+  text-align: left;
+}
+@media all and (max-width: 1179px) {
+  .card__tex-container {
+    margin: 0 auto 0 10px;
+  }
+}
+@media all and (max-width: 900px) {
+  .card__tex-container {
+    margin: 0 auto 0 29px;
+  }
+}
+@media all and (max-width: 641px) {
+  .card__tex-container {
+    margin: 0 auto 0 15px;
+  }
+}
+@media all and (max-width: 590px) {
+  .card__tex-container {
+    margin: 0 auto 0 29px;
+  }
+}

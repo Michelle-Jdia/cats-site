@@ -1,0 +1,4 @@
+.cards__card-info {
+  display: flex;
+  align-items: center;
+}

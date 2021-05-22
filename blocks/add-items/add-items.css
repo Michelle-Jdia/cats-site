@@ -1,0 +1,30 @@
+.add-items {
+    margin-top: 68px;
+    margin-bottom: 83px;
+}
+.add-items__btn {
+    outline: none;
+    background-color: #ffffff;
+    width: 380px;
+    height: 65px;
+    font-size: 14px;
+    line-height: 1.1;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: all linear 0.4s;
+    margin: 0;
+  }
+  .add-items__btn:hover {
+    transform: scale(1.01, 1.01);
+    opacity: 0.8;
+  }
+  @media all and (max-width: 400px) {
+  
+    .add-items__btn {
+      max-width: 98%;
+      margin: 0 auto;
+    }
+  }

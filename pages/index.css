@@ -1,0 +1,47 @@
+@import url("../vendor/normalize.css");
+
+@import url("../vendor/fonts.css");
+
+@import url("../blocks/body/body.css");
+
+@import url("../blocks/page/page.css");
+
+@import url("../blocks/header/header.css");
+
+@import url("../blocks/content/content.css");
+
+@import url("../blocks/selector/selector.css");
+
+/* start cards */
+@import url("../blocks/cards/cards.css");
+@import url("../blocks/cards/__cards-item/cards__card-item.css");
+@import url("../blocks/cards/__card-info/cards__card-info.css");
+@import url("../blocks/cards/__card-line/cards__card-line.css");
+@import url("../blocks/cards/__img-info/cards__img-info.css");
+@import url("../blocks/cards/__img/cards__img.css");
+@import url("../blocks/cards/__like/cards__like.css");
+@import url("../blocks/cards/__num_bold/cards__num_bold.css");
+@import url("../blocks/cards/__price/cards__price.css");
+@import url("../blocks/cards/__subtitle/cards__subtitle.css");
+@import url("../blocks/cards/__tex-container/card__tex-container.css");
+@import url("../blocks/cards/__title/card__title.css");
+@import url("../blocks/cards/__btn/card__btn.css");
+@import url("../blocks/cards/__box-sale/cards__box-sale.css");
+@import url("../blocks/cards/__age-container/cards__age-container.css");
+/* end cards */
+
+@import url("../blocks/add-items/add-items.css");
+
+@import url("../blocks/btn/btn.css");
+
+@import url("../blocks/footer/footer.css");
+@import url("../blocks/footer/__input-error/footer__input-error.css");
+@import url("../blocks/footer/__input-error/_visible/footer__error_visible.css");
+
+@import url("../blocks/popup/popup.css");
+@import url("../blocks/popup/__close/popup__close.css");
+@import url("../blocks/popup/__container/popup__container.css");
+@import url("../blocks/popup/__form/popup__form.css");
+@import url("../blocks/popup/__opened/popup__opened.css");
+@import url("../blocks/popup/__title/popup__title.css");
+@import url("../blocks/popup/__button/popup__button.css");

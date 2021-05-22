@@ -1,0 +1,68 @@
+.selector {
+  margin: 37px auto;
+  text-align: left;
+  max-width: 90%;
+}
+.selector__title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0 48px 0 0;
+  margin-right: 48px;
+}
+.selector__select {
+  width: 150px;
+  border: none;
+  background: none;
+  color: #000000;
+  font-size: 18px;
+  line-height: 1.2;
+  cursor: pointer;
+  padding-right: 24px;
+  margin-right: 55px;
+  height: 25px;
+  transition: opacity ease-in-out 0.2s;
+}
+.selector__select:hover {
+  opacity: 0.7;
+}
+.selector__select:last-child {
+  margin-right: 0;
+}
+@media all and (max-width: 1212px) {
+  .selector {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media all and (max-width: 800px) {
+  .selector {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .selector__select {
+    margin-right: 20px;
+  }
+  .selector__title {
+    margin-right: 20px;
+  }
+}
+@media all and (max-width: 555px) {
+  .selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px auto;
+  }
+  .selector__title {
+    margin-bottom: 0;
+  }
+  .selector__select {
+    margin-top: 20px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
