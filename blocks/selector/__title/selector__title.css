@@ -1,0 +1,13 @@
+.selector__title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0 48px 0 0;
+}
+@media all and (max-width: 800px) {
+  .selector__title {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,23 @@
+.header__container-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+@media all and (max-width: 788px) {
+  .header__container-left {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 590px) {
+  .header__container-left {
+    max-width: 90%;
+  }
+}
+@media all and (max-width: 350px) {
+  .header__container-left {
+    margin-bottom: 10px;
+  }
+}

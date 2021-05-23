@@ -1,0 +1,21 @@
+.header__phone-subtitle {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 3px 0 0;
+}
+@media all and (max-width: 788px) {
+  .header__phone-subtitle {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 590px) {
+  .header__phone-subtitle {
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 350px) {
+  .header__phone-subtitle {
+    font-size: 12px;
+  }
+}

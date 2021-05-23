@@ -1,0 +1,43 @@
+.footer__check-box {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  background: #ffffff;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transition: all ease-in-out 0.2s;
+}
+.footer__check-box:checked {
+  background: #2aa1c0;
+}
+.footer__check-box:hover {
+  filter: brightness(90%);
+  opacity: 0.8;
+}
+.footer__check-box:disabled {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.footer__check-box:after {
+  content: "";
+  position: relative;
+  left: 37%;
+  top: 22%;
+  width: 10%;
+  height: 40%;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.footer__check-box:checked:after {
+  display: block;
+}
+.footer__check-box:disabled:after {
+  border-color: #7b7b7b;
+}

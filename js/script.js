@@ -8,7 +8,7 @@ const closePopupbtn = document.querySelector(".popup__button");
 const closeBtnPopupTakeMe = document.querySelector(".popup-take-me__btn-close");
 const closePopupTakeMeb = document.querySelector(".popup-take-me__close");
 //  scroll btn
-const scrollUpBtn = document.querySelector(".btn__up");
+const scrollUpBtn = document.querySelector(".btn-scroll");
 
 // universal function to open popup
 function openPopup(pop) {

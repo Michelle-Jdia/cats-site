@@ -1,0 +1,25 @@
+.header__nav-bar {
+  margin: 0;
+  padding: 0;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+@media all and (max-width: 788px) {
+  .header__nav-bar {
+    margin-top: 25px;
+    width: 100%;
+  }
+}
+@media all and (max-width: 590px) {
+  .header__nav-bar {
+    margin-top: 15px;
+  }
+}
+@media all and (max-width: 350px) {
+  .header__nav-bar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

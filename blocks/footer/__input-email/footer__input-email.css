@@ -1,0 +1,38 @@
+.footer__input-email {
+  width: 300px;
+  height: 65px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding-left: 33px;
+  font-size: 14px;
+  line-height: 1.1;
+  border: none;
+  outline: none;
+  margin: 0 16px 24px 0;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.2s;
+}
+.footer__input-email:focus {
+  border: #6ebbd3 solid 2.5px;
+}
+@media all and (max-width: 950px) {
+  .footer__input-email {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+}
+@media all and (max-width: 690px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 630px) {
+  .footer__input-email {
+    height: 40px;
+    margin-right: 0;
+  }
+}

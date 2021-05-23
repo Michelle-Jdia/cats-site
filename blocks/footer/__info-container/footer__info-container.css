@@ -1,0 +1,10 @@
+.footer__info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media all and (max-width: 690px) {
+  .footer__info-container {
+    margin-bottom: 10px;
+  }
+}

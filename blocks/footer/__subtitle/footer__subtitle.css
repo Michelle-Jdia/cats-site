@@ -1,0 +1,20 @@
+.footer__subtitle {
+  font-size: 28px;
+  line-height: 1.1;
+  color: #ffffff;
+  max-width: 320px;
+  margin: 26px 0 0;
+}
+@media all and (max-width: 690px) {
+  .footer__subtitle {
+    font-size: 18px;
+    max-width: 200px;
+    margin-top: 16px;
+    text-align: center;
+  }
+}
+@media all and (max-width: 630px) {
+  .footer__subtitle {
+    font-size: 15px;
+  }
+}

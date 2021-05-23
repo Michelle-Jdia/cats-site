@@ -1,0 +1,15 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  width: 1280px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+@media all and (max-width: 788px) {
+  .header__container {
+    flex-direction: column;
+    padding: 0;
+  }
+}

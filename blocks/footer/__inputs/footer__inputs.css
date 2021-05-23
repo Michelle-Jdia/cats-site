@@ -1,0 +1,13 @@
+.footer__inputs {
+  position: relative;
+}
+@media all and (max-width: 950px) {
+  .footer__inputs {
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 630px) {
+  .footer__inputs {
+    margin-bottom: 15px;
+  }
+}
