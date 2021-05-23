@@ -97,7 +97,7 @@
   margin: 3px 0 0;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 788px) {
   .header {
     display: flex;
     align-items: center;
