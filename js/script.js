@@ -37,7 +37,7 @@ function toggleBtn(evt) {
   if (evt.target.classList.contains("card__btn_color_black")) {
     evt.target.value = "Продано";
   } else {
-    evt.target.value = "Купть";
+    evt.target.value = "Купить";
   }
 }
 
