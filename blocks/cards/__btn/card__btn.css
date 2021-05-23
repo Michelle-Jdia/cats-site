@@ -7,12 +7,21 @@
   height: 65px;
   text-align: center;
   border-radius: 0 0 10px 10px;
-  transition: opacity ease-in-out 0.4s;
+  transition: all ease-in-out 0.2.5s;
   box-sizing: border-box;
 }
 .card__btn:hover {
+
+  background-color: #2a7186;
   opacity: 0.9;
+}
+.card__btn:active {
+  background-color: #1a5061;
+  opacity: 1;
 }
 .card__btn_color_black {
   background-color: #1f2021;
+}
+.card__btn_color_black:hover {
+  background-color: #000000;
 }

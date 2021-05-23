@@ -42,8 +42,11 @@
   outline: none;
   margin: 0 16px 24px 0;
   box-sizing: border-box;
+  transition: all ease-in-out 0.2s;
 }
-
+.footer__input-email:focus {
+  border: #6ebbd3 solid 2.5px;
+}
 .footer__btn-submit {
   background-color: #6ebbd3;
   width: 250px;
@@ -57,14 +60,19 @@
   font-size: 14px;
   line-height: 1.2;
   cursor: pointer;
-  transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.2s;
 }
 .footer__btn-submit_disabled {
   color: #000000;
   background: #e5e5e5;
 }
 .footer__btn-submit:hover {
+  transform: scale(1.005, 1.005);
   opacity: 0.8;
+}
+.footer__btn-submit:active {
+  transform: scale(1.009, 1.009);
+  opacity: 0.9;
 }
 
 .footer__check-box {
@@ -77,12 +85,14 @@
   width: 18px;
   height: 18px;
   border-radius: 3px;
+  transition: all ease-in-out 0.2s;
 }
 .footer__check-box:checked {
   background: #2aa1c0;
 }
 .footer__check-box:hover {
   filter: brightness(90%);
+  opacity: .8;
 }
 .footer__check-box:disabled {
   background: #e6e6e6;
@@ -101,6 +111,7 @@
   transform: rotate(45deg);
   display: none;
 }
+
 .footer__check-box:checked:after {
   display: block;
 }
