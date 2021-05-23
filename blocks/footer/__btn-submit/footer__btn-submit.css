@@ -4,6 +4,7 @@
   height: 65px;
   border: none;
   outline: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 10px;
   color: #ffffff;
@@ -11,13 +12,19 @@
   font-size: 14px;
   line-height: 1.2;
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 .footer__btn-submit:hover {
+  -webkit-transform: scale(1.005, 1.005);
+  -ms-transform: scale(1.005, 1.005);
   transform: scale(1.005, 1.005);
   opacity: 0.8;
 }
 .footer__btn-submit:active {
+  -webkit-transform: scale(1.009, 1.009);
+  -ms-transform: scale(1.009, 1.009);
   transform: scale(1.009, 1.009);
   opacity: 0.9;
 }

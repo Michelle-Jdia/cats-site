@@ -14,6 +14,8 @@
   cursor: pointer;
   padding: 0;
   margin: 0;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 .cards__like_type_active {
@@ -23,6 +25,8 @@
   opacity: 0.9;
 }
 .cards__like:active {
+  -webkit-transform: scale(2.02, 2.01);
+  -ms-transform: scale(2.02, 2.01);
   transform: scale(2.02, 2.01);
   opacity: 1;
 }

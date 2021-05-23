@@ -12,6 +12,7 @@
   color: #ffffff;
   padding: 9px;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: none;
 }

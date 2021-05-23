@@ -5,6 +5,8 @@
   color: #ffffff;
   margin: 0;
   cursor: pointer;
+  -webkit-transition: opacity ease-in-out 0.4s;
+  -o-transition: opacity ease-in-out 0.4s;
   transition: opacity ease-in-out 0.4s;
 }
 .header__phone-number:hover {

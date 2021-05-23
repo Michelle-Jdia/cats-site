@@ -3,6 +3,8 @@
   line-height: 1.2;
   color: #ffffff;
   text-decoration: none;
+  -webkit-transition: opacity ease-in-out 0.4s;
+  -o-transition: opacity ease-in-out 0.4s;
   transition: opacity ease-in-out 0.4s;
 }
 .header__link:last-child {

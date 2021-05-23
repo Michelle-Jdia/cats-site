@@ -9,7 +9,10 @@
   border: none;
   outline: none;
   margin: 0 16px 24px 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 .footer__input-email:focus {
@@ -17,7 +20,10 @@
 }
 @media all and (max-width: 950px) {
   .footer__input-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: 50px;
     margin-bottom: 10px;
@@ -25,8 +31,15 @@
 }
 @media all and (max-width: 690px) {
   .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }

@@ -7,7 +7,10 @@
   height: 65px;
   text-align: center;
   border-radius: 0 0 10px 10px;
+  -webkit-transition: all ease-in-out 0.2.5s;
+  -o-transition: all ease-in-out 0.2.5s;
   transition: all ease-in-out 0.2.5s;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .card__btn:hover {
