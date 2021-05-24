@@ -64,8 +64,10 @@ function scrollPage() {
 
 // function whene the user clicks on the button, page scrolls to the top
 function scrollPageUp() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 // events listener
