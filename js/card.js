@@ -50,7 +50,7 @@ function addEl() {
 addEl();
 //  function sort cards by price
 function sortCards() {
-  initialCards.map((item) => {
+  initialCards.forEach((item) => {
     item.price = +item.price.replace(/\D/g, "");
   });
   initialCards.sort((a, b) => (a.price > b.price ? 1 : -1));
