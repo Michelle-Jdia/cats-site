@@ -23,7 +23,7 @@ const initialCards = [
   },
   {
     price: "10 000 руб.",
-    image: "./image/cards/cat (3).jpg",
+    image: "./image/cards/1234.jpg",
   },
 ];
 
