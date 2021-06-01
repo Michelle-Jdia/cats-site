@@ -4,6 +4,7 @@ const popupTakeMeCloseButton = document.querySelector(".popup-take-me__close");
 const popupCloseBySubmitBtn = document.querySelector(".popup__button");
 const popupTakeMeCloseBySubmitBtn = document.querySelector(".popup-take-me__btn-close");
 const popupTakeMe = document.querySelector(".popup-take-me");
+const sortSelector = document.querySelector(".selector__select");
 export default class Card {
   constructor(data) {
     this._price = data.price;
@@ -22,7 +23,6 @@ export default class Card {
     this._setEventListeners();
     this._element.querySelector(".cards__img").src = this._image;
     this._element.querySelector(".cards__price").textContent = this._price;
-
     return this._element;
   }
 
@@ -66,6 +66,17 @@ export default class Card {
       this._handleOpenPopup(popupTakeMe);
     }
   }
+//  function sort cards by price
+//   _sortCards() {
+//     const cardsContainer = document.querySelector('.cards');
+//     this._element = this._getTemplate();
+//     this._element.price = +this._element.price.replace(/\D/g, "");
+
+//     this._element.sort((a, b) => (a.price > b.price ? 1 : -1));
+//   cardsContainer.querySelector('.cards').innerHTML = "";
+//   this.generateCard()
+// }
+
 
   _setEventListeners() {
     this._element.querySelector(".card__btn").addEventListener("click", () => {
@@ -88,5 +99,10 @@ export default class Card {
     popupTakeMeCloseBySubmitBtn.addEventListener("click", () => {
       this._handleClosePopup(popupTakeMe);
     });
+    // sortSelector.addEventListener("change", () => {
+    //   if (sortSelector.value == "price") {
+    //     this._sortCards()
+    //   }
+    // });
   }
 }
