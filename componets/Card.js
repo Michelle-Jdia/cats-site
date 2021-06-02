@@ -66,17 +66,6 @@ export default class Card {
       this._handleOpenPopup(popupTakeMe);
     }
   }
-//  function sort cards by price
-//   _sortCards() {
-//     const cardsContainer = document.querySelector('.cards');
-//     this._element = this._getTemplate();
-//     this._element.price = +this._element.price.replace(/\D/g, "");
-
-//     this._element.sort((a, b) => (a.price > b.price ? 1 : -1));
-//   cardsContainer.querySelector('.cards').innerHTML = "";
-//   this.generateCard()
-// }
-
 
   _setEventListeners() {
     this._element.querySelector(".card__btn").addEventListener("click", () => {
@@ -99,10 +88,5 @@ export default class Card {
     popupTakeMeCloseBySubmitBtn.addEventListener("click", () => {
       this._handleClosePopup(popupTakeMe);
     });
-    // sortSelector.addEventListener("change", () => {
-    //   if (sortSelector.value == "price") {
-    //     this._sortCards()
-    //   }
-    // });
   }
 }

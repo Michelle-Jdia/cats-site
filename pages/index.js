@@ -27,37 +27,14 @@ const initialCards = [
   },
 ];
 const sortSelector = document.querySelector(".selector__select");
-const cardsContainer = document.querySelector('.cards');
+const cardsContainer = document.querySelector(".cards");
 const templateEl = document.querySelector(".template");
-function getItem(item) {
-  const newItem = templateEl.content.cloneNode(true);
-  const addPrice = newItem.querySelector(".cards__price");
-  const addImg = newItem.querySelector(".cards__img");
-  addPrice.textContent = item.price;
-  addImg.src = item.image;
-  
-  return newItem;
-}
-function addEl() {
-  const page = initialCards.map(getItem);
-  cardsContainer.prepend(...page);
-}
-function sortCards() {
-  initialCards.forEach((item) => {
-    item.price = +item.price.replace(/\D/g, "");
-  });
-  initialCards.sort((a, b) => (a.price > b.price ? 1 : -1));
-  cardsContainer.innerHTML = "";
-  addEl();
-}
-initialCards.forEach((item)=>{
 
-  const elemenCard = new Card (item);
+initialCards.forEach((item) => {
+  const elemenCard = new Card(item);
   const creatCardsElement = elemenCard.generateCard();
   cardsContainer.append(creatCardsElement);
-
-
-})
+});
 // function whene the user scrolls down show the button
 window.onscroll = function () {
   scrollPage();
