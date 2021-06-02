@@ -15,4 +15,4 @@
 ------
 
 ------
- [Ссылка на гитхаб](https://github.com/Michelle-Jdia/cats-site.git)
+ [Ссылка на гитхаб](https://michelle-jdia.github.io/cats-site/)
