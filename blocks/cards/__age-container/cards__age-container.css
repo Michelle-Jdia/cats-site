@@ -15,12 +15,26 @@
 
 @media all and (max-width: 1114px) {
   .cards__age-container {
-    margin: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+@media all and (max-width: 900px) {
+  .cards__age-container {
+    margin-right: 46px;
+    margin-left: 46px;
+  }
+}
+@media all and (max-width: 740px) {
+  .cards__age-container {
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 @media all and (max-width: 590px) {
   .cards__age-container {
-    margin: 0 46px 0 22px;
+    margin-right: 46px;
+    margin-left: 46px;
   }
 }
 @media all and (max-width: 401px) {
