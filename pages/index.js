@@ -37,6 +37,12 @@ function addAllItems() {
 }
 addAllItems();
 
+// add more items functions
+const addedMoreItemsBtn = document.querySelector('.add-items__btn');
+addedMoreItemsBtn.addEventListener('click', () => {
+	addAllItems();
+});
+
 // validate
 
 const validateForm = new Validate(form, emailInput, btnSubmit, error, checkBoxInput);
