@@ -41,6 +41,7 @@ export default class Validate {
 			this._errorSelector.textContent = '';
 			this._btnSelector.disabled = false;
 			this._btnSelector.classList.remove('footer__btn-submit_disabled');
+			this._checkInputValidity();
 		}
 	}
 	setEventListeners() {
