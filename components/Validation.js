@@ -8,23 +8,29 @@ export default class Validate {
 		this._errorSelector = errorSelector;
 		this._checkB = checkB;
 	}
+	_showInputError() {
+		this._errorSelector.textContent = this._inputSelector.validationMessage;
+	}
+	_hideInputError() {
+		this._errorSelector.textContent = '';
+	}
 	_checkInputValidity() {
-		if (!this._inputSelector.validity.valid) {
-			this._errorSelector.textContent = this._inputSelector.validationMessage;
-			this._btnSelector.disabled = true;
-			this._btnSelector.classList.add('footer__btn-submit_disabled');
-		} else {
-			this._errorSelector.textContent = '';
-			this._btnSelector.disabled = false;
-			this._btnSelector.classList.remove('footer__btn-submit_disabled');
+		if (this._inputSelector.value.length <= 2 || !this._inputSelector.validity.valid) {
+			this._showInputError();
 			this._disableBtn();
+		} else {
+			this._hideInputError();
+			this._enableBtn();
 		}
 	}
+
 	_disableBtn() {
-		if (this._inputSelector.value.length <= 2) {
-			this._btnSelector.disabled = true;
-			this._btnSelector.classList.add('footer__btn-submit_disabled');
-		}
+		this._btnSelector.disabled = true;
+		this._btnSelector.classList.add('footer__btn-submit_disabled');
+	}
+	_enableBtn() {
+		this._btnSelector.disabled = false;
+		this._btnSelector.classList.remove('footer__btn-submit_disabled');
 	}
 	_checkBb() {
 		if (!this._checkB.validity.valid) {
