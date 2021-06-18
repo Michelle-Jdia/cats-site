@@ -34,4 +34,7 @@ export default class Card {
 			this._handleToggleBtn();
 		});
 	}
+	_sortByPrice() {
+		
+	}
 }

@@ -3,17 +3,6 @@ export default class Popup {
 		this._popup = popupFav;
 		this._popupT = popupTake;
 	}
-	_getTemplate() {
-		const templateCard = document
-			.querySelector('.template')
-			.content.querySelector('.cards__card-item')
-			.cloneNode(true);
-		return templateCard;
-	}
-	_elementCopy() {
-		this._element = this._getTemplate();
-		return this._element;
-	}
 	_toggleLike(b) {
 		if (!b.classList.contains('cards__like_type_active')) {
 			b.classList.add('cards__like_type_active');
