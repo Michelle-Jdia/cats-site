@@ -30,3 +30,10 @@ export const templateEl = '.template';
 // / popup
 export const popupTakeMe = document.querySelector('.popup-take-me');
 export const popupFav = document.querySelector('.popup');
+
+// valid
+export const form = document.querySelector('.form');
+export const emailInput = form.querySelector('.form__input');
+export const btnSubmit = form.querySelector('.form__btn');
+export const error = form.querySelector('.footer__input-error');
+export const checkBoxInput = form.querySelector('.footer__check-box');

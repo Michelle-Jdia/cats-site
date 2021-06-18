@@ -1,7 +1,19 @@
 import Card from '../components/Card.js';
 import Section from '../components/Section.js';
 import Popup from '../components/Popup.js';
-import { popupFav, popupTakeMe, cardsContainer, templateEl, initialCards } from '../utils/constants.js';
+import Validate from '../components/Validation.js';
+import {
+	form,
+	emailInput,
+	btnSubmit,
+	error,
+	popupFav,
+	popupTakeMe,
+	cardsContainer,
+	templateEl,
+	initialCards,
+	checkBoxInput
+} from '../utils/constants.js';
 function addAllItems() {
 	const rendItems = new Section(
 		{
@@ -17,7 +29,6 @@ function addAllItems() {
 	rendItems.rendererItems();
 	const btnLike = document.querySelectorAll('.cards__like');
 	const popup = new Popup(popupFav, popupTakeMe);
-	console.log(btnLike)
 	btnLike.forEach((btn) => {
 		btn.addEventListener('click', () => {
 			popup.setEventListeners(btn);
@@ -25,6 +36,11 @@ function addAllItems() {
 	});
 }
 addAllItems();
+
+// validat
+
+const v = new Validate(form, emailInput, btnSubmit, error, checkBoxInput);
+v.setEventListeners();
 
 // /////////////////////////////////////////
 const scrollUpBtn = document.querySelector('.btn-scroll');

@@ -43,6 +43,13 @@
     justify-content: center;
   }
 }
+@media all and (max-width: 691px) {
+  .footer__input-email {
+    height: 40px;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}
 @media all and (max-width: 630px) {
   .footer__input-email {
     height: 40px;
