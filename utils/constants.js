@@ -24,7 +24,8 @@ export const initialCards = [
 		image: './image/cards/1234.jpg'
 	}
 ];
-
+export const selectorSortPrice = document.querySelector('.sort-price');
+export const scrollUpBtn = document.querySelector('.btn-scroll');
 export const cardsContainer = '.cards';
 export const templateEl = '.template';
 // / popup
