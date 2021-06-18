@@ -37,10 +37,10 @@ function addAllItems() {
 }
 addAllItems();
 
-// validat
+// validate
 
-const v = new Validate(form, emailInput, btnSubmit, error, checkBoxInput);
-v.setEventListeners();
+const validateForm = new Validate(form, emailInput, btnSubmit, error, checkBoxInput);
+validateForm.setEventListeners();
 
 // /////////////////////////////////////////
 const scrollUpBtn = document.querySelector('.btn-scroll');
