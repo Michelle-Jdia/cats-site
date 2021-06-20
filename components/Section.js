@@ -14,7 +14,4 @@ export default class Section {
 	setItem(element) {
 		this._containerSelector.append(element);
 	}
-	clear() {
-		this._container.innerHTML = '';
-	}
 }

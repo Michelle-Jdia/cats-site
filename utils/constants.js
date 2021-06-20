@@ -1,29 +1,37 @@
 export const initialCards = [
 	{
 		price: '30 000 руб.',
-		image: './image/cards/cat (1).jpg'
+		image: './image/cards/cat (1).jpg',
+		age: '5 мес.'
 	},
 	{
 		price: '40 000 руб.',
-		image: './image/cards/cat (2).jpg'
+		image: './image/cards/cat (2).jpg',
+		age: '7 мес.'
 	},
 	{
 		price: '20 000 руб.',
-		image: './image/cards/cat (3).jpg'
+		image: './image/cards/cat (3).jpg',
+		age: '1 мес.'
 	},
 	{
 		price: '25 000 руб.',
-		image: './image/cards/cat (1).jpg'
+		image: './image/cards/cat (1).jpg',
+		age: '3 мес.'
 	},
 	{
 		price: '30 000 руб.',
-		image: './image/cards/cat (2).jpg'
+		image: './image/cards/cat (2).jpg',
+		age: '2 мес.'
 	},
 	{
 		price: '10 000 руб.',
-		image: './image/cards/1234.jpg'
+		image: './image/cards/1234.jpg',
+		age: '9 мес.'
 	}
 ];
+export const containerCards = '.cards__card-item';
+export const selectorSortAge = document.querySelector('.sort-age');
 export const selectorSortPrice = document.querySelector('.sort-price');
 export const scrollUpBtn = document.querySelector('.btn-scroll');
 export const cardsContainer = '.cards';

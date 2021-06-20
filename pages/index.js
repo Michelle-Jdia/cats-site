@@ -2,6 +2,7 @@ import Card from '../components/Card.js';
 import Section from '../components/Section.js';
 import Popup from '../components/Popup.js';
 import Validate from '../components/Validation.js';
+import SortItems from '../components/SortItems.js';
 import {
 	form,
 	emailInput,
@@ -12,21 +13,47 @@ import {
 	cardsContainer,
 	templateEl,
 	initialCards,
-	checkBoxInput
+	checkBoxInput,
+	selectorSortPrice,
+	containerCards,
+	selectorSortAge
 } from '../utils/constants.js';
-function addAllItems() {
-	const rendItems = new Section(
-		{
-			data: initialCards,
-			renderer: (item) => {
-				const card = new Card(item, templateEl);
-				const creatCardsElement = card.generateCard();
-				rendItems.setItem(creatCardsElement);
-			}
-		},
-		cardsContainer
-	);
+//  add cards to DOM ////////////////////////////
+
+function createCards(card) {
+	const newCard = new Card(card, templateEl);
+	const newUserCard = newCard.generateCard();
+
+	return newUserCard;
+}
+const rendItems = new Section(
+	{
+		data: initialCards,
+		renderer: (item) => {
+			const newCard = createCards(item);
+			rendItems.setItem(newCard);
+		}
+	},
+	cardsContainer
+);
+
+rendItems.rendererItems();
+
+//  sort items //////////////////////
+selectorSortPrice.addEventListener('change', () => {
+	const sortItems = new SortItems(initialCards, selectorSortPrice, selectorSortAge, containerCards);
+	sortItems.sort();
 	rendItems.rendererItems();
+	popups();
+});
+selectorSortAge.addEventListener('change', () => {
+	const sortItems = new SortItems(initialCards, selectorSortPrice, selectorSortAge, containerCards);
+	sortItems.sortAge();
+	rendItems.rendererItems();
+	popups();
+});
+//  popup like and fav /////////////////////////
+function popups() {
 	const btnLike = document.querySelectorAll('.cards__like');
 	const popup = new Popup(popupFav, popupTakeMe);
 	btnLike.forEach((btn) => {
@@ -35,20 +62,18 @@ function addAllItems() {
 		});
 	});
 }
-addAllItems();
-
-// add more items functions
+popups();
+// add more items functions////////////////////////
 const addedMoreItemsBtn = document.querySelector('.add-items__btn');
 addedMoreItemsBtn.addEventListener('click', () => {
-	addAllItems();
+	rendItems.rendererItems();
+	popups();
 });
-
-// validate
-
+// validate/////////////////////////////////
 const validateForm = new Validate(form, emailInput, btnSubmit, error, checkBoxInput);
 validateForm.setEventListeners();
 
-// /////////////////////////////////////////
+// scroll page functions///////////////////
 const scrollUpBtn = document.querySelector('.btn-scroll');
 window.onscroll = function() {
 	scrollPage();
@@ -61,8 +86,6 @@ function scrollPage() {
 		scrollUpBtn.style.display = 'none';
 	}
 }
-
-// function when the user clicks on the button, page scrolls to the top
 function scrollPageUp() {
 	window.scrollTo({
 		top: 0,
