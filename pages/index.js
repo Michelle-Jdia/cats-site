@@ -38,7 +38,6 @@ const rendItems = new Section(
 );
 
 rendItems.rendererItems();
-
 //  sort items //////////////////////
 selectorSortPrice.addEventListener('change', () => {
 	const sortItems = new SortItems(initialCards, selectorSortPrice, selectorSortAge, containerCards);
