@@ -1,18 +1,16 @@
 # Cats Site
 
 ------
-1. *Описание проекта*
-* Страница онлайн-магазина с выборкой доступных к продаже кошек.
-* Акцент сделан на адаптивную верстку, интерактивность и активацию кнопок, валидацию форм.
+1. *Description of the project*
+* Online store page with a selection of cats available for sale.
+* The emphasis is on responsive layout, interactivity and button activation, form validation.
 ------
-2. *Инструкция по использованию проекта*
-* Сайт сделан на основании предоставленного макета [Figma](https://www.figma.com/file/UXn4IQQqHM2TdpIpNJPeFt/T-Task?node-id=0%3A1).
-Структура сайта выстроена в файле index.html с использованием разбивки на блоки.
-* Стилизация через CSS, с разбивкой блоков и элементов по структуре БЭМ Nested.
-* Адаптация под различные расширения: 1280px; 1024px; 768px; 320px.
-* Интерактивность кнопок в режиме hover, focus и active.
-* Возможность сортировки карточек по двум критериям.
+2. *Instructions for using the project*
+* Styling via CSS, with a breakdown of blocks and elements according to the BEM Nested structure.
+* Adaptation for various extensions: 1280px; 1024px; 768px; 320px.
+* Interactivity of buttons in hover, focus and active modes.
+* The ability to sort cards by two criteria.
 ------
 
 ------
- [Ссылка на гитхаб](https://michelle-jdia.github.io/cats-site/)
+ [Link to github](https://michelle-jdia.github.io/cats-site/)
