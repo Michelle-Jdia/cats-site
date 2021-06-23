@@ -1,89 +1,94 @@
-import Card from "../componets/Card.js";
-const scrollUpBtn = document.querySelector(".btn-scroll");
-const initialCards = [
-  {
-    price: "30 000 руб.",
-    image: "./image/cards/cat (1).jpg",
-  },
-  {
-    price: "40 000 руб.",
-    image: "./image/cards/cat (2).jpg",
-  },
-  {
-    price: "20 000 руб.",
-    image: "./image/cards/cat (3).jpg",
-  },
-  {
-    price: "25 000 руб.",
-    image: "./image/cards/cat (1).jpg",
-  },
-  {
-    price: "30 000 руб.",
-    image: "./image/cards/cat (2).jpg",
-  },
-  {
-    price: "10 000 руб.",
-    image: "./image/cards/1234.jpg",
-  },
-];
+import Card from '../components/Card.js';
+import Section from '../components/Section.js';
+import Popup from '../components/Popup.js';
+import Validate from '../components/Validation.js';
+import SortItems from '../components/SortItems.js';
+import {
+	form,
+	emailInput,
+	btnSubmit,
+	error,
+	popupFav,
+	popupTakeMe,
+	cardsContainer,
+	templateEl,
+	initialCards,
+	checkBoxInput,
+	selectorSortPrice,
+	containerCards,
+	selectorSortAge
+} from '../utils/constants.js';
+//  add cards to DOM ////////////////////////////
 
-const cardsContainer = document.querySelector('.cards');
+function createCards(card) {
+	const newCard = new Card(card, templateEl);
+	const newUserCard = newCard.generateCard();
 
-initialCards.forEach((item)=>{
+	return newUserCard;
+}
+const rendItems = new Section(
+	{
+		data: initialCards,
+		renderer: (item) => {
+			const newCard = createCards(item);
+			rendItems.setItem(newCard);
+		}
+	},
+	cardsContainer
+);
 
-  const elemenCard = new Card (item);
-  const creatCardsElement = elemenCard.generateCard();
-  cardsContainer.append(creatCardsElement);
-})
-// function whene the user scrolls down show the button
-window.onscroll = function () {
-  scrollPage();
+rendItems.rendererItems();
+//  sort items //////////////////////
+selectorSortPrice.addEventListener('change', () => {
+	const sortItems = new SortItems(initialCards, selectorSortPrice, selectorSortAge, containerCards);
+	sortItems.sort();
+	rendItems.rendererItems();
+	popups();
+});
+selectorSortAge.addEventListener('change', () => {
+	const sortItems = new SortItems(initialCards, selectorSortPrice, selectorSortAge, containerCards);
+	sortItems.sortAge();
+	rendItems.rendererItems();
+	popups();
+});
+//  popup like and fav /////////////////////////
+function popups() {
+	const btnLike = document.querySelectorAll('.cards__like');
+	const popup = new Popup(popupFav, popupTakeMe);
+	btnLike.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			popup.setEventListeners(btn);
+		});
+	});
+}
+popups();
+// add more items functions////////////////////////
+const addedMoreItemsBtn = document.querySelector('.add-items__btn');
+addedMoreItemsBtn.addEventListener('click', () => {
+	rendItems.rendererItems();
+	popups();
+});
+// validate/////////////////////////////////
+const validateForm = new Validate(form, emailInput, btnSubmit, error, checkBoxInput);
+validateForm.setEventListeners();
+
+// scroll page functions///////////////////
+const scrollUpBtn = document.querySelector('.btn-scroll');
+window.onscroll = function() {
+	scrollPage();
 };
 
 function scrollPage() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollUpBtn.style.display = "block";
-  } else {
-    scrollUpBtn.style.display = "none";
-  }
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		scrollUpBtn.style.display = 'block';
+	} else {
+		scrollUpBtn.style.display = 'none';
+	}
 }
-
-// function whene the user clicks on the button, page scrolls to the top
 function scrollPageUp() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+	});
 }
-scrollUpBtn.addEventListener("click", scrollPageUp);
-
-// validate
-const formInput = document.querySelector(".form");
-const emailInput = formInput.querySelector(".form__input");
-const btnSubmit = formInput.querySelector(".form__btn");
-const error = formInput.querySelector(".footer__input-error");
-
-function checkInputValidity() {
-  if (!emailInput.validity.valid) {
-    error.textContent = emailInput.validationMessage;
-    btnSubmit.disabled = true;
-    btnSubmit.classList.add("footer__btn-submit_disabled");
-  } else {
-    error.textContent = "";
-    btnSubmit.disabled = false;
-    btnSubmit.classList.remove("footer__btn-submit_disabled");
-    disableBtn();
-  }
-}
-
-function disableBtn() {
-  if (emailInput.value.length <= 2) {
-    btnSubmit.disabled = true;
-    btnSubmit.classList.add("footer__btn-submit_disabled");
-  }
-}
-emailInput.addEventListener("input", checkInputValidity);
-formInput.addEventListener("submit", function (e) {
-  e.preventDefault();
-});
-disableBtn();
+scrollUpBtn.addEventListener('click', scrollPageUp);

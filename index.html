@@ -52,12 +52,12 @@
             <!-- start section selector and sort cards -->
             <section class="selector">
                 <h6 class="selector__title">Сортировать по:</h6>
-                <select class="selector__select" name="" id="">
+                <select class="selector__select sort-price" name="" id="">
                     <option class="selector__select-price" value=""></option>
                     <option class="selector__select-price" value="price">Цене</option>
 
                 </select>
-                <select class="selector__select" name="" id="">
+                <select class="selector__select sort-age" name="" id="">
                     <option class="selector__select-age" value=""></option>
                     <option class="selector__select-age" value="age">Возрасту</option>
                 </select>
@@ -79,7 +79,7 @@
                                 <div class="cards__card-line"></div>
                                 <p class="cards__subtitle">Коричневый окрас</p>
                                 <div class="cards__age-container">
-                                    <p class="cards__subtitle-age cards__num_bold">2 мес.</p>
+                                    <p class="cards__subtitle-age cards__num_bold age"></p>
                                     <span class="cards__subtitle">Возраст</span>
                                 </div>
                                 <div class="cards__pow-container">
@@ -97,7 +97,7 @@
 
             <!-- start button add cards -->
             <section class="add-items">
-                <button class="add-items__btn">Показать еще 20</button>
+                <button class="add-items__btn">Показать еще</button>
             </section>
             <!-- start button add cards -->
 
@@ -153,10 +153,7 @@
         </div>
     </div>
     <!-- end popup take me -->
-<script type="module" src="./pages/index.js"></script>
-<!-- <script type="module" src="./componets/Card.js"></script>
-<script type="module" src="./componets/Section.js"></script>
-<script type="module" src="./componets/Popup.js"></script> -->
+    <script type="module" src="./pages/index.js"></script>
 </body>
 
 </html>
