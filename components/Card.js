@@ -24,9 +24,9 @@ export default class Card {
 	_handleToggleBtn() {
 		this._element.querySelector('.card__btn').classList.toggle('card__btn_color_black');
 		if (this._element.querySelector('.card__btn').classList.contains('card__btn_color_black')) {
-			this._element.querySelector('.card__btn').value = 'Продано';
+			this._element.querySelector('.card__btn').value = 'Sold';
 		} else {
-			this._element.querySelector('.card__btn').value = 'Купить';
+			this._element.querySelector('.card__btn').value = 'Buy';
 		}
 	}
 
