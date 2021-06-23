@@ -10,6 +10,8 @@
 * Adaptation for various extensions: 1280px; 1024px; 768px; 320px.
 * Interactivity of buttons in hover, focus and active modes.
 * The ability to sort cards by two criteria.
+* Email validation.
+* Scroll up page.
 ------
 
 ------
